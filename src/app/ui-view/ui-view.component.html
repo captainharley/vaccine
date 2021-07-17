@@ -1,0 +1,44 @@
+<div class="outer-container">
+    <div class="outer-container-heading">
+        <div class="heading">VACCINE INFO</div>
+       
+    </div>
+    <div class="inner-container">
+        <div class="states-dashboard" >
+            <div class="state" *ngFor="let states of allStates" id=state_{{states.state_id}} (click)="showstateDistricts(states.state_id)"><span>{{states.state_name}}</span></div>
+        </div>
+        <div class="district-dashboard" [hidden]="isHidden">
+            <div class="back-btn" (click)="showStates()"> <i class="fas fa-angle-double-left"></i> <span>ALL STATES</span></div>
+            <div class="district" *ngFor="let districts of stateDistricts" id=district_{{districts.district_id}} (click)="showVaccineDataForDistrict(districts.district_id)"><span>{{districts.district_name}}</span></div>
+        </div>
+        
+        <div class="slot-info">
+            <div class="age-select">
+                <div class="age">
+                    <div class="age-toggle age-active" id="18" (click)="updateage(18)">18+</div>
+                    <div class="age-toggle" id="18" (click)="updateage(45)">45+</div>
+                </div>
+            </div>
+            <div class="slot">
+               <div class="each-slot" *ngFor="let slots of vaccineSlots">
+                    <div class="center-name"> {{slots.name}} </div>
+                    <div class="vaccine-info">
+                        <div class="capacity-dose1">
+                            <div class="doseheading">DOSE 1</div>
+                            <div class="dosevalue">{{slots.available_capacity_dose1}}</div>
+                        </div>
+                        <div class="vaccine-name">{{slots.vaccine}}</div>
+                        <div class="capacity-dose2">
+                            <div class="doseheading">DOSE 2</div>
+                            <div class="dosevalue">{{slots.available_capacity_dose2}}</div>
+                        </div>
+                    </div>
+                    <div class="center-address">
+                        <div class="addressheading">ADDRESS : </div>
+                        <div class="addressvalue">{{slots.address}}</div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+in tsconfig.app.json
+ "types": ["googlemaps"]
+
+npm install @agm/core
+npm install @google/maps
+npm i @types/googlemaps@3.39.13 --save-dev

@@ -1,0 +1,22 @@
+html{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* .fas {
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    } */
